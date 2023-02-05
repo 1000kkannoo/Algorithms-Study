@@ -15,24 +15,15 @@ public class p6 {
         m = sc.nextInt();
         cook = sc.nextInt();
         if (m + cook >= 60) {
-            if (m > cook) {
-                h = h + ((m + cook) / 60);
-                if (h >= 24) {
-                    h -= 24;
-                }
-                System.out.print(h + " ");
-                System.out.print(m + cook - (60 * ((m + cook) / 60)));
-            } else if (m < cook) {
-                h = h + ((cook + m) / 60);
-                if (h >= 24) {
-                    h -= 24;
-                }
-                System.out.print(h + " ");
-                System.out.print(cook + m - (60 * ((cook + m) / 60)));
+            int i = (m + cook) / 60;
+            int j = (m + cook) % 60;
+            if (h + i >= 24) {
+                System.out.print(h + i - 24 + " " + j);
+            } else {
+                System.out.print(h + i + " " + j);
             }
         } else {
-            System.out.print(h + " ");
-            System.out.print(m + cook);
+            System.out.print(h + " " + (m + cook));
         }
     }
 }
