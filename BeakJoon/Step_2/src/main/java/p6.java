@@ -9,11 +9,13 @@ KOI 전자에서는 건강에 좋고 맛있는 훈제오리구이 요리를 간�
  */
 public class p6 {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
-        int h, m, cook;
-        h = sc.nextInt();
-        m = sc.nextInt();
-        cook = sc.nextInt();
+
+        int h = sc.nextInt();
+        int m = sc.nextInt();
+        int cook = sc.nextInt();
+
         if (m + cook >= 60) {
             int i = (m + cook) / 60;
             int j = (m + cook) % 60;
